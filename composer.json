@@ -1,17 +1,24 @@
 {
-    "name": "xrow/eznewsletter-ls",
-    "description": "Ongoing development efforts of the eznewsletter tool.",
+    "name": "se7enxweb/eznewsletter",
+    "description": "eZ Publish solution for newslester composition and sending to users. Give it a try today!",
     "type": "ezpublish-legacy-extension",
-    "license": "GPL-2.0",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
+            "name" : "7x",
+            "homepage": "https://se7enx.com",
+            "email": "info@se7enx.com",
+            "role": "Developer"
+        },
+        {
             "name": "xrow GmbH",
-            "homepage": "http://www.xrow.com"
+            "homepage": "https://www.xrow.com",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "dev",
     "require": {
-        "ezsystems/ezpublish-legacy-installer": "*"
+        "se7enxweb/ezpublish-legacy-installer": "*"
     },
     "extra": {
         "ezpublish-legacy-extension-name": "eznewsletter"
