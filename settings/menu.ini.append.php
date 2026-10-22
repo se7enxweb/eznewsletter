@@ -17,6 +17,9 @@ Tabs[]=eznewsletter
 #Tabs[]=eznewsletterBounce
 
 [Topmenu_eznewsletter_setup]
+# Icon - (optional) the name of an icon admin4 draws before the tab's name: a name of design.ini
+#        [AdminDesignSettings] IconList[] (Bootstrap Icons); a name it does not know draws no icon.
+Icon=gear
 NavigationPartIdentifier=eznewsletter_setup
 Name=Newsletter setup
 Tooltip=eZ Newsletter setup
@@ -32,6 +35,7 @@ Shown[navigation]=true
 Shown[browse]=true
 
 [Topmenu_eznewsletter]
+Icon=envelope
 NavigationPartIdentifier=eznewsletter
 Name=Newsletter
 Tooltip=Newsletter menu
@@ -47,6 +51,7 @@ Shown[navigation]=true
 Shown[browse]=true
 
 [Topmenu_eznewsletterList]
+Icon=list-task
 NavigationPartIdentifier=eznewsletterList
 Name=List management
 Tooltip=Newsletter lists menu
@@ -62,6 +67,7 @@ Shown[navigation]=true
 Shown[browse]=true
 
 [Topmenu_eznewsletterSearch]
+Icon=search
 NavigationPartIdentifier=eznewsletterSearch
 Name=Search subscriber
 Tooltip=Subscriber search
@@ -77,6 +83,7 @@ Shown[navigation]=true
 Shown[browse]=true
 
 [Topmenu_eznewsletterBounce]
+Icon=inbox
 NavigationPartIdentifier=eznewsletterBounce
 Name=Bounce management
 Tooltip=Newsletter bounces menu
