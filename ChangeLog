@@ -1,3 +1,28 @@
+Changelog Newsletter 1.7.0 -> 1.7.1 (2026-10-21)
+-------------------------------------------------
+Features:
+- The admin tabs show an icon in admin4: Newsletter = envelope, List management = list-task,
+  Search subscriber = search, Bounce management = inbox, Newsletter setup = gear
+  (Icon= lines in settings/menu.ini.append.php).
+
+Bugs:
+- The newsletterlist datatype and the "Newsletter read" and "Newsletter import event" workflow
+  events construct on PHP 8 (__construct() instead of constructors named after the class).
+- The import event uses eZNewsletterType::StatusPublished instead of an undefined constant.
+
+Packaging:
+- composer.json: description, keywords, homepage, support links, original authors, PHP >= 8.0,
+  se7enxweb/exponential-legacy-installer, ext-imap suggested, installer-name.
+- License stated as GPL-2.0-only, as the source headers say (was GPL-2.0-or-later in
+  composer.json); the GPL v2 text ships as LICENSE.
+- ezinfo.php rewritten (class eznewsletterInfo, version, copyright, license, website) and a new
+  extension.xml with the same data for the about page.
+
+Docs:
+- README.md rewritten as a full guide; the old README is folded into it.
+
+
+
 Changelog Newsletter 1.6.0 Stable -> 1.7.0
 -------------------------------------------------
 Features:
