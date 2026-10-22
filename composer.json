@@ -1,26 +1,50 @@
 {
     "name": "se7enxweb/eznewsletter",
-    "description": "eZ Publish solution for newslester composition and sending to users. Give it a try today!",
+    "description": "Newsletter extension for Exponential: newsletter types, issues built from content objects, subscription lists, CSV import, a Robinson (do not mail) list, bounce handling, recurring sendouts and read tracking, sent by cronjobs through sendmail, SMTP, an SMTP cluster or to files.",
     "type": "ezpublish-legacy-extension",
-    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "exponential",
+        "exponential-extension",
+        "ezpublish-legacy",
+        "newsletter",
+        "mailing-list",
+        "subscription",
+        "bounce",
+        "email"
+    ],
+    "homepage": "https://github.com/se7enxweb/eznewsletter",
+    "license": "GPL-2.0-only",
     "authors": [
         {
-            "name" : "7x",
-            "homepage": "https://se7enx.com",
-            "email": "info@se7enx.com",
-            "role": "Developer"
+            "name": "eZ Systems AS",
+            "homepage": "https://ez.no",
+            "role": "Original author"
         },
         {
             "name": "xrow GmbH",
             "homepage": "https://www.xrow.com",
             "role": "Developer"
+        },
+        {
+            "name": "7x",
+            "email": "info@se7enx.com",
+            "homepage": "https://se7enx.com",
+            "role": "Maintainer"
         }
     ],
-    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/se7enxweb/eznewsletter/issues",
+        "source": "https://github.com/se7enxweb/eznewsletter"
+    },
     "require": {
-        "se7enxweb/ezpublish-legacy-installer": "*"
+        "php": ">=8.0",
+        "se7enxweb/exponential-legacy-installer": "^2.0"
+    },
+    "suggest": {
+        "ext-imap": "Needed by the check_bounce.php and email_subscribe.php cronjobs, which read bounces and subscribe or unsubscribe mails from a POP3 or IMAP mailbox."
     },
     "extra": {
-        "ezpublish-legacy-extension-name": "eznewsletter"
+        "ezpublish-legacy-extension-name": "eznewsletter",
+        "installer-name": "eznewsletter"
     }
 }
