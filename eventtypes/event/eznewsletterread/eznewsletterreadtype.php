@@ -39,9 +39,9 @@ class eZNewsletterReadType extends eZWorkflowEventType
 {
     const EventName = "eznewsletterread";   
     
-    function eZNewsletterReadType()
+    function __construct()
     {
-        $this->eZWorkflowEventType( eZNewsletterReadType::EventName, ezpI18n::tr( 'eznewsletter/workflow/event', "Newsletter read" ) );
+        parent::__construct( eZNewsletterReadType::EventName, ezpI18n::tr( 'eznewsletter/workflow/event', "Newsletter read" ) );
         $this->setTriggerTypes( array( 'content' => array( 'read' => array( 'before' ) ) ) );
     }
 

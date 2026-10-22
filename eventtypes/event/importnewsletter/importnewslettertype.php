@@ -3,9 +3,9 @@
 class ImportNewsletterType extends eZWorkflowEventType
 {
     const WORKFLOW_TYPE_STRING = "importnewsletter";
-    function ImportNewsletterType()
+    function __construct()
     {
-    	$this->eZWorkflowEventType( ImportNewsletterType::WORKFLOW_TYPE_STRING, ezpI18n::tr( 'newsletteraddon/event', 'Newsletter import event' ));
+    	parent::__construct( ImportNewsletterType::WORKFLOW_TYPE_STRING, ezpI18n::tr( 'newsletteraddon/event', 'Newsletter import event' ));
     	$this->setTriggerTypes( array( 'content' => array( 'publish' => array( 'after' ) ) ) );
     }
     function execute( $process, $event )
@@ -19,7 +19,7 @@ class ImportNewsletterType extends eZWorkflowEventType
         $newslettertype = eZPersistentObject::fetchObject( eZNewsletterType::definition(),
                                                 null,
                                                 array( 'article_pool_object_id' => $parentco->attribute( 'id' ),
-                                                       'status' => eZNewsletterType_StatusPublished ) );
+                                                       'status' => eZNewsletterType::StatusPublished ) );
         
                                
         $list = eZNewsletter::fetchByContentObject( $parameters['object_id'] );
